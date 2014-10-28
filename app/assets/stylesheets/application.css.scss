@@ -1,5 +1,8 @@
 @import "bootstrap";
-@import "font-awesome";
 
+@import "variable";
+@import "layouts/header";
+@import "layouts/main";
 @import "pages/cause";
 @import "pages/challenge";
+@import "pledge/pledge";

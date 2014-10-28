@@ -1,0 +1,33 @@
+#header-section {
+  .top-bar {
+    background: $main-color;
+    #header-text {
+      font-size: 35px;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      padding: 10px 0;
+    }
+  }
+
+  .nav-bar {
+    background: #fff;
+    .list-inline {
+      margin: 10px 0;
+      text-align: center;
+      font-size: $nav-li-size;
+      li {
+        margin: 0 10px;
+        a {
+          font-weight: bold;
+          color: #1BA041;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+}
+
