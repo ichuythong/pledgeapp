@@ -1,3 +1,8 @@
 body {
   background: $bg-color;
+  font-family: $base-font;
+}
+
+.container {
+  width: 960px;
 }
