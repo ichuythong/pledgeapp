@@ -1,3 +1,20 @@
 body {
   background: $bg-color;
+  font-family: $base-font;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.row20 {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 2px;
+}
+
+.line {
+  line-height: 1px;
+  border-top: 1px solid #f1f1f1;
 }

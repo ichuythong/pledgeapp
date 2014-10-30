@@ -1,0 +1,10 @@
+/ - if params[:visible]
+.container
+  .row
+    = render "shared/slide"
+
+#conten-wrapper
+  .container
+    .row
+      .content-inner
+        = yield

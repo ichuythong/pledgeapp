@@ -1,0 +1,15 @@
+.carousel {
+  .carousel-indicator {
+
+  }
+
+  .carousel-inner {
+    .carousel-caption {
+      & > h3 {
+        text-align: left;
+        font-size: 50px;
+        vertical-align: center;
+      }
+    }
+  }
+}
