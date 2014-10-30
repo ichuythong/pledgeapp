@@ -1,0 +1,22 @@
+= simple_form_for "#", :defaults => {input_html: {class: "form-control"} } do |f|
+  .row
+    .col-md-6
+      .form-group= f.input :name, :placeholder => "Name", :label => false, required: true
+    .col-md-6
+      .form-group= f.input :pledge, :placeholder => "Pledge (USD)", :label => false
+  .row
+    .col-md-6
+      .form-group= f.input :email, :placeholder => "Email", :label => false
+    .col-md-6
+      .form-group= f.input :phone_number, :placeholder => "Phone number", :label => false
+  .row
+    .col-md-12
+      .form-group= f.input :message, as: "text", :placeholder => "Message...", :label => false
+  .row
+    .col-md-12
+      .form-group= f.input :accepted, :label => false, inline_label: "Click here if you want to show anonymous", as: :boolean
+  .row
+    .col-md-6.text-center
+      .form-group= f.button :submit, "Pledge direct", class: "btn btn-success btn-lg"
+    .col-md-6.text-center
+      .form-group= f.button :submit, "Contact me to collect", class: "btn btn-success btn-lg"
