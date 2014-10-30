@@ -3,6 +3,13 @@ body {
   font-family: $base-font;
 }
 
-.container {
-  width: 960px;
+.row20 {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+
+.line {
+  line-height: 1px;
+  border-top: 1px solid #f1f1f1;
 }
