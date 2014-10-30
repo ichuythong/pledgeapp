@@ -12,12 +12,4 @@ class CreateDonators < ActiveRecord::Migration
     end
   end
 
-  def self.up
-    execute "ALTER TABLE donators modify COLUMN id int(8) AUTO_INCREMENT"
-  end
-
-  def self.down
-    execute "ALTER TABLE donators modify COLUMN id int(8)"
-  end
-
 end
