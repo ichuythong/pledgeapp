@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: pledgeapp_development
+  #username: pledgeapp
+  #password:
+  #host: localhost
+  #port: 5432
+
+test:
+  <<: *default
+  database: pledgeapp_test
+
+production:
+  <<: *default
+  database: pledgeapp_production
+  username: pledgeapp
+  password: <%= ENV['PLEDGEAPP_DATABASE_PASSWORD'] %>
