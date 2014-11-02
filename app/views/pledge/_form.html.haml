@@ -1,4 +1,4 @@
-= simple_form_for "fm" do |f|
+= simple_form_for(@pledge, as: :fm, url: pledge_path) do |f|
   .row
     .col-md-6
       .form-group= f.input :name, :placeholder => "Name", :label => false,input_html: {class: "form-control"}
@@ -8,17 +8,17 @@
     .col-md-6
       .form-group= f.input :email, as: :email, :placeholder => "Email", :label => false,input_html: {class: "form-control"}
     .col-md-6
-      .form-group= f.input :phone_number, :placeholder => "Phone number ex: 050-555-555", :label => false,input_html: {class: "form-control"}
+      .form-group= f.input :phone, :placeholder => "Phone number ex: 050-555-555", :label => false,input_html: {class: "form-control"}
   .row
     .col-md-12
       .form-group= f.input :message, as: "text", :placeholder => "Message...", :label => false, input_html: {class: "form-control"}
   .row
     .col-md-6
       .form-group
-        = f.input :accepted, inline_label: "Click here if you want to show anonymous", as: :boolean, :input_html => {:class => "padding-l-20"}
+        = f.input :anonymous, inline_label: " Click here if you want to show anonymous", as: :boolean, :input_html => {:class => "padding-l-20"}
   .row
     .col-md-6.text-center
-      .form-group= f.button :submit, "Pledge direct", class: "btn-min-width btn btn-success btn-lg",input_html: {class: "form-control"}
+      .form-group= f.button :submit, "Pledge direct", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "direct"
     .col-md-6.text-center
-      .form-group= f.button :submit, "Contact me to collect", class: "btn-min-width btn btn-success btn-lg",input_html: {class: "form-control"}
-
+      .form-group= f.button :submit, "Contact me to collect", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "contact"
+= flash[:notice]

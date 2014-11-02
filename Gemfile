@@ -26,6 +26,7 @@ gem 'simple_form',                  '~> 3.1.0.rc2'
 
 group :development, :test do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'rspec-rails',                '~> 2.14.2'
   gem 'capybara',                   '~> 2.1.0'

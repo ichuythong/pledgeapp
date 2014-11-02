@@ -12,12 +12,8 @@
               %th Pledge
               %th Messages
           %tbody
-            %tr
-              %td Rithy Thul
-              %td $200
-              %td I hope this pledge will make some small different.
-            %tr
-              %td Anonymous
-              %td $350
-              %td I hope this pledge will make some small different.
-
+            - @data.each do |donator|
+              %tr
+                %td= donator.name
+                %td= donator.pledge
+                %td= donator.message
