@@ -8,8 +8,11 @@ class PledgeController < ApplicationController
   def create
   	@pledge = Donator.new(safe_params)
     if @pledge.save
-      # redirect_to "https://secure.causevox.com/pay?url=http://donate.pepycambodia.org" if params[:name] == "direct"
-      redirect_to :pledge, flash: { notice:  "Pledge success"}
+      if params[:direct].blank?
+        redirect_to :pledge, flash: { notice:  "Pledge success"}
+      else
+        redirect_to :pledge, flash: { success: "direct" }
+      end
     else
       donator_list
       render action: :index

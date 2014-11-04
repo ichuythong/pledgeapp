@@ -22,3 +22,8 @@
     .col-md-6.text-center
       .form-group= f.button :submit, "Contact me to collect", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "contact"
 = flash[:notice]
+- if flash[:success].eql?("direct")
+  :javascript
+    $(document).ready( function() {
+      window.open('https://secure.causevox.com/pay?url=http://donate.pepycambodia.org', '_blank', 'toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes');
+    } );
