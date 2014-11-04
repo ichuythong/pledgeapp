@@ -3,7 +3,7 @@
     .col-md-6
       .form-group= f.input :name, :placeholder => "Name", :label => false,input_html: {class: "form-control"}
     .col-md-6
-      .form-group= f.input :pledge, :placeholder => "Pledge (USD)", :label => false, hint: '*Note: 10 - Thank, 20, 40, 100, 200, 300, 500 ',input_html: {class: "form-control"}
+      .form-group= f.input :pledge, :placeholder => "Pledge (USD)", :label => false, hint: 'What will your pledge impact? 10, 20, 40, 100, 200, 300, 500',input_html: {class: "form-control"}
   .row
     .col-md-6
       .form-group= f.input :email, as: :email, :placeholder => "Email", :label => false,input_html: {class: "form-control"}
@@ -15,7 +15,7 @@
   .row
     .col-md-6
       .form-group
-        = f.input :anonymous, inline_label: " Click here if you want to show anonymous", as: :boolean, :input_html => {:class => "padding-l-20"}
+        = f.input :anonymous, inline_label: "Show anonymous, click here", as: :boolean, :input_html => {:class => "padding-l-20"}
   .row
     .col-md-6.text-center
       .form-group= f.button :submit, "Pledge direct", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "direct"
