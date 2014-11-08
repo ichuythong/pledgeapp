@@ -24,6 +24,11 @@ gem 'bootstrap-sass',               '~> 3.1.1.1'
 gem 'haml-rails',                   '>= 0.4'
 gem 'simple_form',                  '~> 3.1.0.rc2'
 
+group :production do
+  gem 'rails_12factor'
+  gem 'unicorn'
+end
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'

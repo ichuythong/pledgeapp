@@ -19,7 +19,7 @@ class Admin::DonorsController < ApplicationController
 
   def destroy
     @donor.destroy
-    redirect_to admin_donors_path, notice: 'Donator was successfully destroyed.'
+    redirect_to admin_donors_path, notice: 'Donor was successfully destroyed.'
   end
 
   private
