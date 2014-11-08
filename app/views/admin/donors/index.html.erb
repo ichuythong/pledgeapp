@@ -1,0 +1,30 @@
+<h1>Listing Donors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Pledge</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Message</th>
+      <th>Anonymous</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @donors.each do |donor| %>
+      <tr>
+        <td><%= donor.name %></td>
+        <td><%= donor.pledge %></td>
+        <td><%= donor.email %></td>
+        <td><%= donor.phone %></td>
+        <td><%= donor.message %></td>
+        <td><%= donor.anonymous %></td>
+        <td> | <%= link_to 'Edit', edit_admin_donor_path(donor) %></td>
+        <td> | <%= link_to 'Destroy', admin_donor_path(donor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

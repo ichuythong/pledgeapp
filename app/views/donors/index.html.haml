@@ -1,0 +1,19 @@
+#pledge
+  .row20
+    .page-header
+      = render "form"
+  .row
+    .col-md-12
+      .form-group
+        %table.table.table-striped
+          %thead
+            %tr
+              %th Name
+              %th Pledge
+              %th Messages
+          %tbody
+            - donors.each do |d|
+              %tr
+                %td= d.anonymous ? 'Anonymous' : d.name
+                %td= d.pledge
+                %td= d.message
