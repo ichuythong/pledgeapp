@@ -46,6 +46,9 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     debug_inspector (0.0.2)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
     haml (4.0.5)
@@ -129,6 +132,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.1.1.1)
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   haml-rails (>= 0.4)
   jquery-rails
   jquery-turbolinks

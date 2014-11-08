@@ -1,4 +1,4 @@
-= simple_form_for(@pledge, as: :fm, url: pledge_path) do |f|
+= simple_form_for @donor do |f|
   .row
     .col-md-6
       .form-group= f.input :name, :placeholder => "Name", :label => false,input_html: {class: "form-control"}
@@ -21,8 +21,10 @@
       .form-group= f.button :submit, "Pledge direct", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "direct"
     .col-md-6.text-center
       .form-group= f.button :submit, "Contact me to collect", class: "btn-min-width btn btn-success btn-lg", input_html: {class: "form-control"}, name: "contact"
+
 = flash[:notice]
-- if flash[:success].eql?("direct")
+
+- if params[:pledge_direct].present?
   :javascript
     $(document).ready( function() {
       window.open('https://secure.causevox.com/pay?url=http://donate.pepycambodia.org', '_blank', 'toolbar=yes, location=yes, status=yes, menubar=yes, scrollbars=yes');

@@ -1,2 +1,0 @@
-module CauseHelper
-end
