@@ -2,18 +2,14 @@
   %ol.carousel-indicators
     %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
     %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
   .carousel-inner{:role => "listbox"}
     .item.active
-      %img{:alt => "...", :src => "https://snapy-attachments.s3.amazonaws.com/shop/cover_photo/attachment/53f38b666c69367df8220000/ccb0d076-e474-4757-b09a-25f986803d38.jpg", :class => "img-responsive"}
-        .carousel-caption
-          %h3 ...
-          %p ...
+      = image_tag "cycling.png", class: "img-responsive"
     .item
-      %img{:alt => "...", :src => "https://snapy-attachments.s3.amazonaws.com/shop/cover_photo/attachment/53f38b666c69367df8220000/ccb0d076-e474-4757-b09a-25f986803d38.jpg", :class => "img-responsive"}
-        .carousel-caption
-          %h3 100 TO HELP 1000
-          %p ...
+      = image_tag "cycling2.png", class: "img-responsive"
+      / .carousel-caption
+      /   %h3 100 TO HELP 1000
+      /   %p ...
 
   %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
     %span.glyphicon.glyphicon-chevron-left
