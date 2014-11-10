@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root    'pages#home'
+  root    'pages#challenge'
 
   get     :challenge,       to: 'pages#challenge'
   get     :cause,           to: 'pages#cause'
