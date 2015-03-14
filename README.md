@@ -11,7 +11,6 @@ Everyone can clone and use this project for any kind  of purpose that they think
 
 ### TECHNOLOGY
 
-
 We developed this project by using Ruby on Rails.
 
 Sample project: http://www.letsdoitpp.com/
